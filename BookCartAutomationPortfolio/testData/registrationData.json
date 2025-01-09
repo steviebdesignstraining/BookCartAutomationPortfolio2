@@ -1,0 +1,50 @@
+[
+    {
+        "firstName": "Stephen",
+        "lastName": "Bennett",
+        "userName": "steviebdesigns",
+        "password": "Test123",
+        "confirmPassword": "Test321",
+        "gender": "Male"
+    },
+    {
+        "firstName": "Jon",
+        "lastName": "Bennett",
+        "userName": "steviebdesigns",
+        "password": "Test321",
+        "confirmPassword": "Test321",
+        "gender": "Male"   
+    },
+    {
+        "firstName": "Vivine",
+        "lastName": "Campbell",
+        "userName": "Vcambell",
+        "password": "",
+        "confirmPassword": "",
+        "gender": "Female"
+    },
+    {
+        "firstName": "Sophia",
+        "lastName": "Anderson",
+        "userName": "sophia.anderson123",
+        "password": "Passw0rd!123",
+        "confirmPassword": "Test321",
+        "gender": "Female"
+    },
+    {
+        "firstName": "James",
+        "lastName": "Thompson",
+        "userName": "james.thompson89",
+        "password": "SecurePass@456",
+        "confirmPassword": "SecurePass@456",
+        "gender": "Male"
+    },
+    {
+        "firstName": "Emily",
+        "lastName": "Davis",
+        "userName": "emily.davis2025",
+        "password": "Str0ngP@ss789",
+        "confirmPassword": "Str0ngP@ss789",
+        "gender": "Female"
+    }
+]
