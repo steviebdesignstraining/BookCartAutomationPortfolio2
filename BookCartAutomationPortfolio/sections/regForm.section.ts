@@ -16,16 +16,22 @@ export default class FormActions {
     userName = () => this.page.getByPlaceholder('User name'); // Update selector to match actual input name
     password = () => this.page.getByPlaceholder('Password').nth(0); // Update selector to match actual input name
     confirmPassword = () => this.page.getByPlaceholder('Confirm Password'); // Update selector to match actual input name password 
-    // gender = () => this.page.getByRole('radio', { name: gender() });
+
+    // Gender selector (dynamic based on JSON data)
+    gender = () => this.page.getByLabel(this.loginDetails.gender, { exact: true });
 
     // Actions
     public async enterFormDetails() {
-        await this.firstName().fill(this.loginDetails.firstName); // Fill email field with data from JSON
-        await this.lastName().fill(this.loginDetails.lastName); // Fill password field with data from JSON 
-        await this.userName().fill(this.loginDetails.userName); // Fill email field with data from JSON
+        await this.firstName().fill(this.loginDetails.firstName); // Fill first name field with data from JSON
+        await this.lastName().fill(this.loginDetails.lastName); // Fill last name field with data from JSON
+        await this.userName().fill(this.loginDetails.userName); // Fill user name field with data from JSON
         await this.password().fill(this.loginDetails.password); // Fill password field with data from JSON
-        await this.confirmPassword().fill(this.loginDetails.confirmPassword); // Fill password field with data from JSON
-        // await this.gender().click(this.loginDetails.gender); 
+        await this.confirmPassword().fill(this.loginDetails.confirmPassword); // Fill confirm password field with data from JSON
+        
+        // Click the correct gender radio button
+        await this.gender().click();
+        
+        // Submit the form
         await this.page.getByRole('button', { name: 'Register' }).click();
     }
 }
